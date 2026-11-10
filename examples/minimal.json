@@ -1,0 +1,17 @@
+{
+  "name": "Example: Minimal Preset Library",
+  "presets": [
+    {
+      "title": "Cheap 2005 camera phone",
+      "prompt": "An ordinary candid snapshot from a cheap 2005 mobile phone with soft focus, low resolution, patchy sensor noise, visible JPEG artifacts and awkward handheld framing."
+    },
+    {
+      "title": "Indoor flash",
+      "prompt": "A spontaneous amateur indoor snapshot with blunt frontal flash, shiny clipped highlights, a dark background, unpredictable white balance and a cheap early-digital color response."
+    },
+    {
+      "title": "Old compact digital camera",
+      "prompt": "A casual 2004 consumer compact-camera photograph with slightly smeared details, harsh in-camera sharpening, uneven exposure, vivid small-sensor colors and visible JPEG compression."
+    }
+  ]
+}
