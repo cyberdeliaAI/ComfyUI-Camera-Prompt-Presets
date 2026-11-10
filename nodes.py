@@ -87,7 +87,7 @@ def _load_presets(library: str) -> list[dict[str, str]]:
 
 def _default_library() -> str:
     libraries = _libraries()
-    preferred = "built_in:early_mobile_phone.json"
+    preferred = "built_in:default.json"
     return preferred if preferred in libraries else next(iter(libraries), "(no libraries found)")
 
 
