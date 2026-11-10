@@ -16,11 +16,23 @@ async function getJson(path, options) {
     return body;
 }
 
-function updateCombo(widget, names, desired) {
-    const values = names.length ? names : ["(no choices found)"];
-    // Built-in LiteGraph COMBO widgets expose the selectable values here.
+const NO_PRESET = "None (no camera prompt)";
+const WARNING_PREFIX = "⚠ Camera preset: ";
+
+function updateCombo(widget, names, desired, { preserveMissing = false, fallback = undefined } = {}) {
+    const values = names.length ? [...names] : ["(no choices found)"];
     widget.options.values = values;
-    widget.value = values.includes(desired) ? desired : values[0];
+    if (values.includes(desired)) {
+        widget.value = desired;
+        return true;
+    }
+    if (preserveMissing && typeof desired === "string" && desired.length) {
+        // Keep exactly what the saved workflow requested, even if unavailable.
+        widget.value = desired;
+        return false;
+    }
+    widget.value = values.includes(fallback) ? fallback : values[0];
+    return true;
 }
 
 function reportError(error) {
@@ -43,7 +55,7 @@ function uploadDialog(node) {
             const form = new FormData();
             form.append("file", file, file.name);
             const uploaded = await getJson(`${ROUTE}/upload`, { method: "POST", body: form });
-            await node.cameraRefreshLibraries(uploaded.library);
+            await node.cameraRefreshLibraries({ preferLibrary: uploaded.library, preserveMissing: false });
         } catch (error) {
             reportError(error);
         }
@@ -65,38 +77,72 @@ app.registerExtension({
             if (!libraryWidget || !presetWidget) return result;
 
             let generation = 0;
+            const originalTitle = node.title.startsWith(WARNING_PREFIX)
+                ? "Camera Prompt Presets (JSON)" : node.title;
             const priorLibraryCallback = libraryWidget.callback;
 
-            node.cameraRefreshPresets = async (preferTitle) => {
+            node.cameraSetWarning = (message) => {
+                const title = message ? `${WARNING_PREFIX}${message}` : originalTitle;
+                if (node.title !== title) {
+                    node.title = title; // Visible in canvas and Vue; queue validation also rejects missing selections.
+                    node.setDirtyCanvas?.(true, true);
+                }
+                if (message && node._cameraWarning !== message) {
+                    console.warn(`[Camera Prompt Presets] ${message}`);
+                }
+                node._cameraWarning = message;
+            };
+
+            node.cameraRefreshPresets = async ({ preferTitle, preserveMissing = true } = {}) => {
                 const sequence = ++generation;
                 const library = libraryWidget.value;
                 const response = await getJson(`${ROUTE}/presets?library=${encodeURIComponent(library)}`);
                 if (sequence !== generation || libraryWidget.value !== library) return;
-                updateCombo(presetWidget, response.presets.map(p => p.title), preferTitle ?? presetWidget.value);
+                const titles = [NO_PRESET, ...response.presets.map(p => p.title)];
+                const desired = preferTitle ?? presetWidget.value;
+                const valid = updateCombo(presetWidget, titles, desired, {
+                    preserveMissing,
+                    fallback: response.presets[0]?.title ?? NO_PRESET,
+                });
+                node.cameraSetWarning(valid ? "" : `Missing preset: ${String(desired).slice(0, 65)}`);
                 node.setDirtyCanvas?.(true, true);
             };
 
-            node.cameraRefreshLibraries = async (preferLibrary, preferTitle) => {
+            node.cameraRefreshLibraries = async ({ preferLibrary, preferTitle, preserveMissing = true } = {}) => {
                 const response = await getJson(`${ROUTE}/libraries`);
                 const desired = preferLibrary ?? libraryWidget.value;
-                updateCombo(libraryWidget, response.libraries, desired);
-                await node.cameraRefreshPresets(preferTitle);
+                const valid = updateCombo(libraryWidget, response.libraries, desired, {
+                    preserveMissing,
+                    fallback: response.default,
+                });
+                if (!valid) {
+                    ++generation; // Cancel an earlier preset request for another library.
+                    node.cameraSetWarning(`Missing library: ${String(desired).slice(0, 65)}`);
+                    node.setDirtyCanvas?.(true, true);
+                    return;
+                }
+                await node.cameraRefreshPresets({ preferTitle, preserveMissing });
             };
 
             libraryWidget.callback = function (value, ...rest) {
                 priorLibraryCallback?.call(this, value, ...rest);
-                node.cameraRefreshPresets().catch(reportError);
+                // An explicit user change may select a default; reopening a workflow may not.
+                node.cameraRefreshPresets({ preserveMissing: false }).catch(reportError);
             };
 
-            node.addWidget("button", "Upload JSON...", "", () => uploadDialog(node));
-            node.addWidget("button", "Refresh presets", "", () => {
-                node.cameraRefreshLibraries().catch(reportError);
+            const uploadButton = node.addWidget("button", "Upload JSON...", "", () => uploadDialog(node));
+            const refreshButton = node.addWidget("button", "Refresh libraries", "", () => {
+                node.cameraRefreshLibraries({ preserveMissing: true }).catch(reportError);
             });
+            uploadButton.serialize = false;
+            refreshButton.serialize = false;
             node.setSize?.([Math.max(node.size?.[0] || 300, 325), Math.max(node.size?.[1] || 220, 240)]);
 
-            // New nodes refresh here; workflow-loaded nodes refresh in onConfigure.
+            // New nodes can use the default; saved workflows must keep their exact choices.
             queueMicrotask(() => {
-                if (!node._cameraConfigured) node.cameraRefreshLibraries().catch(reportError);
+                if (!node._cameraConfigured) {
+                    node.cameraRefreshLibraries({ preserveMissing: false }).catch(reportError);
+                }
             });
             return result;
         };
@@ -105,7 +151,9 @@ app.registerExtension({
             this._cameraConfigured = true;
             const library = this.widgets?.find(w => w.name === "library")?.value;
             const title = this.widgets?.find(w => w.name === "preset")?.value;
-            queueMicrotask(() => this.cameraRefreshLibraries?.(library, title).catch(reportError));
+            queueMicrotask(() => this.cameraRefreshLibraries?.({
+                preferLibrary: library, preferTitle: title, preserveMissing: true,
+            }).catch(reportError));
             return result;
         };
     },
