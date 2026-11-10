@@ -1,0 +1,42 @@
+{
+  "name": "Example: Historical Photographic Processes",
+  "version": "1.0",
+  "description": "Early photography from the 1840s to the 1960s. Pairs well with period-appropriate base prompts.",
+  "presets": [
+    {
+      "title": "1840s | Daguerreotype",
+      "category": "19th century",
+      "prompt": "A mid-19th-century daguerreotype on a silvered copper plate. Extremely fine detail with a mirror-like metallic sheen and a cool silver-gray tonality. Anything that moved during the long exposure is softly blurred. Tarnish blooms in blue and amber creep in from the corners of the plate, framed by a thin oval brass mat."
+    },
+    {
+      "title": "1860s | Wet plate tintype",
+      "category": "19th century",
+      "prompt": "A wet plate collodion tintype on a dark lacquered metal plate. Sharp detail in the center with soft, swirling focus toward the edges. The blue-sensitive emulsion renders skin darker and skies as blank white. Chocolate-brown shadows, creamy highlights and the irregular poured edge of the collodion with small streaks, comets and dust specks."
+    },
+    {
+      "title": "1900s | Glass plate negative",
+      "category": "Early 20th century",
+      "prompt": "A photograph printed from an early-20th-century glass plate negative. Very sharp, delicate detail in soft warm sepia tones on matte paper. Slightly uneven development and faint silvering along the borders. Small cracks and chips along one edge of the plate show as thin white lines in the print."
+    },
+    {
+      "title": "1910s | Autochrome color plate",
+      "category": "Early 20th century",
+      "prompt": "An early color photograph made with the autochrome process. Soft color built from tiny grains of dyed starch, with muted greens, rosy reds and violet blues. Dreamy low contrast and a fine speckled texture across the whole image. It has the gentle glow of a glass plate viewed against the light."
+    },
+    {
+      "title": "1940s | Press camera flashbulb",
+      "category": "Mid 20th century",
+      "prompt": "Shot with a large press camera and a single flashbulb mounted beside the lens. Harsh frontal light flattens faces and throws hard black shadows onto the background. Crisp black and white with deep blacks and bright, slightly blown highlights. Sharp large-format detail and the urgent, unposed feel of a 1940s newspaper photograph."
+    },
+    {
+      "title": "1950s | Amateur color slide",
+      "category": "Mid 20th century",
+      "prompt": "A 1950s amateur color slide with dense, vivid color. Saturated reds, deep blues, a slightly warm overall cast and the strong contrast of early reversal film. Fine grain, crisp detail and a subtle fade toward the edges from age. Exposed for bright daylight by a hobbyist with a rangefinder camera."
+    },
+    {
+      "title": "1960s | Square family print",
+      "category": "Mid 20th century",
+      "prompt": "A 1960s square-format family snapshot printed with a white deckled border. Soft colors that have faded toward warm yellow and magenta, slightly low contrast and gentle vignetting from a simple box camera lens. Mild softness away from the center and the casual, centered framing of a family album photo."
+    }
+  ]
+}
