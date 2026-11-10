@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-camera-prompt-presets"
+description = "Camera and photographic style prompt suffix presets for ComfyUI. JSON libraries, dynamic dropdowns, uploads and a no-effect option. By Cyberdelia AI Lab."
+version = "0.1.0"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+[project.urls]
+Repository = "https://github.com/cyberdeliaAI/ComfyUI-Camera-Prompt-Presets"
+
+[tool.comfy]
+PublisherId = "cyberdelia"
+DisplayName = "Cyberdelia Camera Prompt Presets"
+Icon = "https://raw.githubusercontent.com/cyberdeliaAI/comfyui-cyberdelia-metadata/main/assets/icon.png"
