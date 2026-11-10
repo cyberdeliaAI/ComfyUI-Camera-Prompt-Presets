@@ -1,0 +1,47 @@
+{
+  "name": "Example: Lens and Optical Effects",
+  "version": "1.0",
+  "description": "Optical character on its own: distortion, focus, flare and perspective. Combine with any scene.",
+  "presets": [
+    {
+      "title": "Lens | Fisheye",
+      "category": "Wide angle",
+      "prompt": "Photographed with a 10mm fisheye lens held close to the scene. Extreme barrel distortion bends every straight line into a curve and pushes the edges toward a circle. Objects near the lens look huge while the background shrinks away. Deep focus from front to back and the exaggerated perspective of skate and action photography."
+    },
+    {
+      "title": "Lens | Pinhole camera",
+      "category": "Lo-fi",
+      "prompt": "Made with a pinhole camera that has no lens at all. Soft, dreamy focus with no sharp plane, endless depth of field and dark vignetting toward the corners. A long exposure leaves moving elements ghosted and translucent. Gentle low-contrast tones and the quiet, timeless feel of handmade photography."
+    },
+    {
+      "title": "Lens | Tilt-shift miniature",
+      "category": "Focus",
+      "prompt": "Photographed from a high vantage point with a tilt-shift lens tilted for an extremely narrow band of focus across the middle of the frame. Everything above and below that band melts into strong blur, so the real scene looks like a tiny scale model. Bright, slightly boosted colors and crisp detail inside the focus band."
+    },
+    {
+      "title": "Lens | Extreme macro",
+      "category": "Focus",
+      "prompt": "An extreme close-up made with a 1:1 macro lens and a ring flash. Tiny textures become large and abstract, with every fiber, crystal or droplet visible. The focus plane is razor thin and falls away into smooth blur within millimeters. Even, shadowless light from the ring flash against a dark, quiet background."
+    },
+    {
+      "title": "Lens | Long telephoto compression",
+      "category": "Telephoto",
+      "prompt": "Photographed from far away with a 600mm telephoto lens. Strong perspective compression stacks the background close behind the subject, so distant hills, buildings or crowds loom large. Shallow depth of field and a soft atmospheric haze from shooting through a long stretch of air. Calm, flattened layers of depth that feel almost graphic."
+    },
+    {
+      "title": "Lens | Anamorphic cinema",
+      "category": "Cinema",
+      "prompt": "Shot through an anamorphic cinema lens. Oval out-of-focus highlights, horizontal blue streak flares across bright light sources and gentle barrel distortion at the edges. A sharp center with slight softness and falloff toward the corners. The wide, cinematic feel of a feature film frame."
+    },
+    {
+      "title": "Lens | Vintage soft-focus",
+      "category": "Vintage",
+      "prompt": "Photographed with a vintage soft-focus portrait lens. A sharp core of detail is surrounded by a luminous glow that spreads around every highlight. Swirling background blur and a gentle loss of contrast. Romantic, painterly softness reminiscent of early 20th-century pictorialist portraits."
+    },
+    {
+      "title": "Lens | Plastic toy camera",
+      "category": "Lo-fi",
+      "prompt": "Taken with a cheap plastic toy camera with a single plastic lens. Heavy dark vignetting, soft blurry edges, a sharper but imperfect center and random light leaks. Oversaturated, contrasty colors and slight chromatic fringing around high-contrast edges. The happy, accidental look of lo-fi film photography."
+    }
+  ]
+}
