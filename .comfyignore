@@ -1,0 +1,10 @@
+.git/
+.github/
+tests/
+examples/
+.ruff_cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.zip
+.DS_Store
