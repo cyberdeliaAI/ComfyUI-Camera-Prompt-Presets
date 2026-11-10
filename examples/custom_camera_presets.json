@@ -1,0 +1,32 @@
+{
+  "name": "Example: Custom Camera Presets",
+  "version": "1.0",
+  "description": "Edit the titles and prompts to build your own library. Category is optional.",
+  "presets": [
+    {
+      "title": "2003 | Nightclub with harsh flash",
+      "category": "Mobile phone",
+      "prompt": "A spontaneous low-quality nightclub snapshot taken with a very early mobile phone camera around 2003. A harsh frontal flash blows out faces and nearby reflective surfaces while the background fades into near-black. Very low pixel count, crude JPEG compression, unstable colors, visible noise, weak focus and clumsy framing make the image feel like a genuine personal photo."
+    },
+    {
+      "title": "2006 | Fluorescent office",
+      "category": "Mobile phone",
+      "prompt": "A candid 2006 camera-phone snapshot under unflattering overhead fluorescent lights. The cheap sensor produces a green-yellow color cast, muddy shadows and weak texture, with slight hand motion, soft focus and compressed JPEG edges. The image looks unplanned, plain and visibly low quality."
+    },
+    {
+      "title": "2004 | Budget digital compact",
+      "category": "Digital compact",
+      "prompt": "An ordinary point-and-shoot photo from a cheap digital compact camera around 2004. Slightly oversaturated CCD colors, softened edges from a budget lens, brittle in-camera sharpening, imperfect automatic exposure and a modest amount of JPEG artifacts. Casual, unposed personal photography rather than an intentional retro look."
+    },
+    {
+      "title": "2005 | Low-resolution webcam",
+      "category": "Webcam",
+      "prompt": "A low-resolution still image captured by an inexpensive USB webcam around 2005. Flat perspective from a fixed desk position, soft and waxy detail, noticeable compression blocks, awkward automatic white balance, noisy dark areas and uneven monitor-lit illumination. Unpolished personal-computer snapshot quality."
+    },
+    {
+      "title": "1997 | Disposable camera scan",
+      "category": "Film",
+      "prompt": "A casual personal snapshot from a 1990s disposable film camera, scanned from a small consumer print. Soft plastic-lens corners, direct flash falloff, uneven exposure, modest film grain, muted detail and slightly faded print colors. Natural flaws of an inexpensive one-use camera rather than a digitally applied vintage filter."
+    }
+  ]
+}
