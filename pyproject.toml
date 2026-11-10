@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-camera-prompt-presets"
-description = "Camera and photographic style prompt suffix presets for ComfyUI. JSON libraries, dynamic dropdowns, uploads and a no-effect option. By Cyberdelia AI Lab."
+description = "Camera and photography style presets for ComfyUI, with JSON libraries, dynamic dropdowns and custom uploads. By Cyberdelia AI Lab."
 version = "0.1.0"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
