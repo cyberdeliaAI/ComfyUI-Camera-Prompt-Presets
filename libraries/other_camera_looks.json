@@ -1,0 +1,76 @@
+{
+  "name": "Other Camera Looks",
+  "version": "1.0",
+  "presets": [
+    {
+      "title": "01 | 2004 Budget Digital Compact",
+      "category": "Digital compact",
+      "prompt": "A candid snapshot from a very inexpensive point-and-shoot digital camera around 2004. The on-camera flash is flat and direct, the small CCD sensor renders bright colors harshly, and fine detail is softened by the cheap zoom lens. Automatic exposure lifts faces but clips bright windows and reflective objects. Slight red-eye, yellowish white balance, crunchy sharpening and visible JPEG compression make it feel like an ordinary family photo copied from an old memory card."
+    },
+    {
+      "title": "02 | 2009 Compact Camera at ISO 1600",
+      "category": "Digital compact",
+      "prompt": "A spontaneous photograph from a small consumer digital compact camera around 2009, taken at an overly high ISO setting. Grainy chroma blotches creep into dim areas, the camera aggressively smears fine detail with digital noise reduction, and edge sharpening leaves brittle outlines. The compact flash falls off quickly with distance. Clumsy auto-exposure, ordinary zoom-lens perspective and careless framing preserve the character of an unedited personal photo."
+    },
+    {
+      "title": "03 | 1999 First-Generation Digital Camera",
+      "category": "Early digital",
+      "prompt": "A genuine late-1990s consumer digital-camera snapshot, with limited pixel count, primitive sensor color, unnatural magenta and green shifts, brittle contours and pronounced blocky JPEG artifacts. The inexpensive lens renders corners soft and edges slightly smeared. The camera struggles with bright backgrounds and dark indoor areas, with uncertain autofocus and automatic white balance. It feels like a casual photo transferred from a floppy disk or early memory card, not a modern imitation."
+    },
+    {
+      "title": "04 | 2005 Webcam Still",
+      "category": "Webcam",
+      "prompt": "A low-quality still captured from a cheap desktop webcam around 2005. Fixed wide-angle view from close to the screen, awkward eye-level framing, soft plastic-lens optics and coarse low-resolution detail. The automatic exposure overcompensates for the monitor glow, flattening faces and darkening the room. Muddy shadows, greenish color balance, visible pixel noise and blocky compression resemble a paused frame from a forgotten video chat."
+    },
+    {
+      "title": "05 | Late-1990s MiniDV Camcorder Frame",
+      "category": "Camcorder",
+      "prompt": "A single candid still extracted from a consumer MiniDV camcorder tape recorded in the late 1990s. The image has video-like interlaced edges, modest standard-definition detail, slight motion softness and harsh white clipping. Consumer video colors, visible noise in dim corners and awkward handheld framing make it look like a moment pulled from an actual family recording. The scene feels continuous and accidental rather than carefully posed for a photograph."
+    },
+    {
+      "title": "06 | VHS Home Video Freeze Frame",
+      "category": "Camcorder",
+      "prompt": "A single frame grabbed from an ordinary family VHS recording from the early 1990s. Soft analog video definition, horizontal color bleed, subtle luma noise, faint tracking instability near the bottom edge and slightly misaligned red and blue details. Bright areas bloom into soft white and shadows lose definition. The framing is unplanned, with the feel of someone holding a heavy home camcorder for a fleeting moment."
+    },
+    {
+      "title": "07 | 1990s Disposable Film Camera",
+      "category": "Film",
+      "prompt": "An everyday 1990s snapshot taken with a very cheap disposable 35mm film camera. Fixed-focus plastic-lens softness, modest corner vignetting, rough film grain and uneven development give the photo a genuine inexpensive print quality. Direct built-in flash creates bright flat foreground faces and a dark background. The composition feels instinctive and slightly careless, with realistic exposure errors and occasional warm or greenish color shifts from the film stock."
+    },
+    {
+      "title": "08 | Faded Family Photo Print Scan",
+      "category": "Film scan",
+      "prompt": "A real old family snapshot scanned from a small glossy photo print. Slightly faded dyes, a mild yellow-magenta cast, visible print grain, softened edges and occasional fine scanner streaks. The paper surface catches tiny scratches and dust marks near the borders, while the picture itself keeps natural imperfections from a basic consumer film camera. It resembles a print pulled from a drawer and scanned years later."
+    },
+    {
+      "title": "09 | 1980s Pocket Camera Snapshot",
+      "category": "Film",
+      "prompt": "A casual snapshot from a compact consumer film camera in the 1980s. Fine but visible film grain, gentle softness from a simple fixed lens, warm color-negative tones and slightly inconsistent exposure. Daylight highlights roll into pale cream, while shadow areas become dense and color-shifted. Spontaneous amateur framing and a tangible printed-photograph feel give the image the character of an ordinary photo-album memory."
+    },
+    {
+      "title": "10 | Instant Film Party Photo",
+      "category": "Instant film",
+      "prompt": "A spontaneous instant-film photograph from a crowded personal gathering. Soft diffuse detail, slightly muted color, narrow tonal range, creamy highlights and dense imperfect shadows. On-camera flash gives faces a flat bright foreground appearance while the background dims quickly. The chemistry creates small uneven patches of color and subtle edge variation in the print. An ordinary candid moment, not a studio portrait."
+    },
+    {
+      "title": "11 | 2012 Budget Smartphone Flash",
+      "category": "Smartphone",
+      "prompt": "A hurried indoor smartphone snapshot from around 2012, taken on a low-cost handset. The image is sharper than an early camera-phone picture but still has aggressive noise reduction, smeared skin texture, edge sharpening halos and inconsistent automatic white balance. A harsh tiny LED flash creates shiny highlights and flat frontal illumination. Framing remains casual, slightly crooked and unedited, like an ordinary photo saved to an old messaging app."
+    },
+    {
+      "title": "12 | Early-2000s Security Camera Frame",
+      "category": "Surveillance",
+      "prompt": "An incidental still from an inexpensive early-2000s fixed security camera. High corner-mounted viewpoint, weak standard-definition detail, washed-out desaturated color and blocky video compression. Automatic exposure struggles between bright windows and shadowed interiors, leaving faces and distant objects indistinct. The frame is rigid, indifferent and purely observational, with noisy dark areas and the functional look of archived surveillance footage."
+    },
+    {
+      "title": "13 | 2010 Dashboard Camera Capture",
+      "category": "Dashcam",
+      "prompt": "A single accidental frame from an inexpensive early-2010s dashboard camera. Fixed wide-angle windshield perspective, mild barrel distortion, low-cost optics and over-sharpened compressed video detail. The camera exposes for a bright exterior, pushing interior shadows toward muddy gray. Specular lights bloom, motion leaves small smears at the edges, and the overall impression is utilitarian recorded footage rather than deliberate photography."
+    },
+    {
+      "title": "14 | 1990s Shopping Mall Photo Booth",
+      "category": "Photo booth",
+      "prompt": "A candid photo-booth portrait from the 1990s. A cramped front-facing composition at close distance, inexpensive lens softness, flat frontal flash and slightly unnatural color reproduction. Faces are unevenly exposed, backgrounds remain plain and dark, and the printed-photo texture carries small flaws from a basic automated photo printer. The result feels personal, awkward and believable, like a small photo strip kept in a wallet."
+    }
+  ]
+}
