@@ -1,6 +1,15 @@
-# Camera Prompt Presets — ComfyUI node
+# Cyberdelia Camera Prompt Presets — ComfyUI
 
-Choose a **JSON library** and a **named camera prompt** from a dropdown. The node automatically appends the chosen camera-style suffix to your existing prompt. No CSV, NegPiP or negative prompts required.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cyberdeliaAI/comfyui-cyberdelia-metadata/main/assets/icon.png" alt="Cyberdelia AI Lab" width="200">
+</p>
+
+[![Tests](https://github.com/cyberdeliaAI/ComfyUI-Camera-Prompt-Presets/actions/workflows/tests.yml/badge.svg)](https://github.com/cyberdeliaAI/ComfyUI-Camera-Prompt-Presets/actions/workflows/tests.yml)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+
+By **Cyberdelia AI Lab** · [Comfy Registry publisher](https://registry.comfy.org/publishers/cyberdelia)
+
+Choose a **JSON library** and a **named camera or photographic-process preset** from a dropdown. The node appends the selected camera suffix, or leaves the base prompt unchanged when **None (no camera prompt)** is selected.
 
 ## Installation
 
@@ -21,7 +30,7 @@ No pip packages are required beyond the normal ComfyUI installation.
 ## How to use
 
 - `base_prompt`: type a scene prompt or convert this widget to an input and connect another STRING node.
-- `library`: choose between `default.json` (the initial selection), `early_mobile_phone.json`, `other_camera_looks.json`, and your own uploaded JSON libraries.
+- `library`: choose from the eight included JSON libraries or your own uploaded JSON files. New nodes default to `default.json`.
 - `preset`: dynamically shows **None (no camera prompt)** plus the titles in the selected JSON. Choose **None** to leave the base prompt unchanged (no camera suffix).
 - `Upload JSON...`: pick a JSON file from your computer. It is checked and stored on the ComfyUI server in `ComfyUI/input/camera_prompt_presets/`. After upload, the new file is selected automatically.
 - `Refresh libraries`: refresh the library list and choices after editing a JSON on disk.
@@ -57,6 +66,21 @@ The `title` and `prompt` fields are required; `category` is optional and reserve
 
 The bundled `default.json` provides **16 curated everyday camera presets** across mobile phones, digital compacts, webcams, film and camcorders. The bundled `early_mobile_phone.json` library includes **24 full prompts** and **10 compact prompts** from the Krea 2 mobile-phone prompt collection. The included `other_camera_looks.json` contains **14 more camera styles**, such as cheap digital compacts, webcams, VHS, disposable film, instant film and early smartphone cameras.
 
+## Included JSON libraries
+
+| Library | Presets | Use |
+|---|---:|---|
+| `default.json` | 16 | Curated popular choices (duplicates of full libraries) |
+| `early_mobile_phone.json` | 34 | Early-2000s cheap mobile cameras |
+| `other_camera_looks.json` | 14 | Digital compacts, webcams, VHS, instant photos |
+| `analog_film.json` | 8 | Color/B&W negative, slide and film processing |
+| `historical_processes.json` | 7 | Daguerreotypes through 1960s family prints |
+| `lens_effects.json` | 8 | Fisheye, macro, tilt-shift and unusual optics |
+| `professional_photography.json` | 8 | Studio, editorial, street, architecture, sports |
+| `sdxl_tag_suffixes.json` | 6 | SDXL tag-style suffixes; **not Krea 2 optimized** |
+
+There are **101 selectable library entries**, including 16 intentionally duplicated curated defaults; **85 unique prompts**. **None** is a built-in no-effect choice, not a JSON entry. Use one camera style at a time to avoid contradicting your base prompt's lighting or camera.
+
 ## Example JSON files and scenes
 
 The `examples/` folder provides ready-to-copy templates and sample base prompts:
@@ -81,6 +105,14 @@ The JSON example files are templates: to use one, upload it using **Upload JSON.
 - **Workflow reports invalid preset**: the title was renamed or removed from JSON. The node preserves the original title and shows a warning; restore the JSON or explicitly choose another preset. Use **None** if you do not want a camera effect.
 - **Uploaded file missing after moving computers**: copy the corresponding `.json` from `input/camera_prompt_presets/`.
 - **Syntax error**: JSON requires double-quoted keys/values and no trailing commas.
+
+## Cyberdelia publishing setup
+
+This repository uses the same [GPL-3.0](LICENSE) license and Cyberdelia astronaut artwork as [Cyberdelia Image Metadata](https://github.com/cyberdeliaAI/comfyui-cyberdelia-metadata). The [Tests workflow](.github/workflows/tests.yml) runs Python and frontend checks and supplies the badge above.
+
+The [`pyproject.toml`](pyproject.toml) file targets the [`cyberdelia` Registry publisher](https://registry.comfy.org/publishers/cyberdelia). Registry publication is **manual only** via [Publish workflow](.github/workflows/publish.yml), and requires the GitHub Actions secret `REGISTRY_ACCESS_TOKEN`. The repository is currently **private** and has **not been published** to the Registry. Do a real ComfyUI UI smoke test and make the code accessible before the first public release. Never commit API tokens.
+
+The icon currently links to the shared Cyberdelia artwork in the public Image Metadata repository. A unique icon can replace it later.
 
 ## Local checks
 
