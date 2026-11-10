@@ -1,19 +1,26 @@
 name: Publish to Comfy Registry
 
-# Deliberately manual-only until the private project is ready for public release.
-# Requires a REGISTRY_ACCESS_TOKEN secret owned by publisher cyberdelia.
+# Publish when the version/package metadata in pyproject.toml changes.
+# Can also be triggered manually from GitHub Actions.
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "pyproject.toml"
 
 permissions:
   contents: read
 
 jobs:
   publish-node:
+    name: Publish custom node
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'cyberdelia' || github.repository_owner == 'cyberdeliaAI' }}
+    if: ${{ github.repository_owner == 'cyberdeliaAI' }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v4
       - name: Publish custom node
         uses: Comfy-Org/publish-node-action@v1
         with:
