@@ -23,6 +23,7 @@ UPLOAD_FOLDER = Path(folder_paths.get_input_directory()) / "camera_prompt_preset
 MAX_UPLOAD_BYTES = 2 * 1024 * 1024
 MAX_PRESETS = 500
 MAX_PROMPT_LENGTH = 12000
+NO_PRESET = "None (no camera prompt)"
 FILENAME_RE = re.compile(r"^[\w .()\-]{1,100}\.json$", re.IGNORECASE)
 
 
@@ -78,6 +79,8 @@ def _read_and_validate(data: bytes) -> list[dict[str, str]]:
             raise ValueError(f"Duplicate preset title: {title}")
         seen.add(title.casefold())
         normalized.append({"title": title, "prompt": prompt.strip(), "category": category.strip() or "Other"})
+    if NO_PRESET.casefold() in seen:
+        raise ValueError(f"Preset title {NO_PRESET!r} is reserved for the built-in no-effect choice")
     return normalized
 
 
@@ -106,7 +109,7 @@ class CameraPromptPresets:
             "required": {
                 "base_prompt": ("STRING", {"multiline": True, "default": "", "dynamicPrompts": False}),
                 "library": (names, {"default": preferred}),
-                "preset": (preset_titles, {"default": preset_titles[0]}),
+                "preset": ([NO_PRESET, *preset_titles], {"default": preset_titles[0]}),
             },
         }
 
@@ -118,6 +121,8 @@ class CameraPromptPresets:
 
     @classmethod
     def VALIDATE_INPUTS(cls, library, preset, **kwargs):
+        if preset == NO_PRESET:
+            return True
         # Explicitly validate against current JSON rather than the stale dropdown
         # options in the original /object_info response.
         try:
@@ -131,6 +136,8 @@ class CameraPromptPresets:
     @classmethod
     def IS_CHANGED(cls, base_prompt, library, preset):
         """Refresh downstream prompts when JSON changes, even under the same filename."""
+        if preset == NO_PRESET:
+            return "camera-prompt-disabled"
         try:
             contents = _resolve_library(library).read_bytes()
             digest = hashlib.sha256(contents).hexdigest()
@@ -139,6 +146,8 @@ class CameraPromptPresets:
         return f"{library}|{preset}|{digest}"
 
     def compose(self, base_prompt, library, preset):
+        if preset == NO_PRESET:
+            return ((base_prompt or "").strip(), "", NO_PRESET)
         selected = next((p for p in _load_presets(library) if p["title"] == preset), None)
         if selected is None:
             raise ValueError(f"Preset {preset!r} is not in selected JSON library")
