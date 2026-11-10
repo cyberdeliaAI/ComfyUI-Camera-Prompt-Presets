@@ -1,0 +1,47 @@
+{
+  "name": "Example: Analog Film Looks",
+  "version": "1.0",
+  "description": "Generic film stock and processing looks, described without brand names.",
+  "presets": [
+    {
+      "title": "Film | Portrait color negative",
+      "category": "Color negative",
+      "prompt": "Shot on professional 35mm color negative film made for portraits. Soft, low contrast with gentle pastel color, warm natural skin tones and highlights that roll off smoothly instead of clipping. Fine, even grain is visible in the midtones. A slightly lifted black point and the subtle color shifts of a lab scan made from the original negative."
+    },
+    {
+      "title": "Film | Pushed high-speed color",
+      "category": "Color negative",
+      "prompt": "Photographed on fast 800-speed color negative film pushed two stops in development. Coarse, clumped grain, deep crushed shadows and contrast that feels raw and gritty. Highlights shift toward warm orange while the darker areas turn murky green. Bright practical lights bloom with a faint red halation glow around their edges."
+    },
+    {
+      "title": "Film | Saturated slide film",
+      "category": "Slide film",
+      "prompt": "Photographed on color reversal slide film with very fine grain. Deep, saturated blues and reds, dense shadows and bright, clean highlights with almost no exposure latitude. Colors look jewel-like and slightly cool. The crisp, luminous look of a transparency viewed on a light table."
+    },
+    {
+      "title": "Film | Black-and-white 400",
+      "category": "Black and white",
+      "prompt": "A black-and-white photograph on classic 400-speed panchromatic film, printed on fiber-based paper. Visible organic grain covers the whole frame, with rich midtone separation and deep but detailed shadows. Skies render a little darker than in reality. No color at all, only warm-neutral grays from paper white to deep black."
+    },
+    {
+      "title": "Film | Motion picture still",
+      "category": "Cinema",
+      "prompt": "A frame from a 35mm motion picture shot on film. Gentle halation around bright lights, soft film grain and a slightly teal shadow tint against warm skin tones. Motivated lighting from a practical source with dark, controlled negative fill. It reads as a still pulled from a feature film rather than a photograph."
+    },
+    {
+      "title": "Film | Expired consumer roll",
+      "category": "Color negative",
+      "prompt": "Taken on a roll of consumer color film that expired years ago. Faded, unpredictable colors with a magenta or cyan cast, raised grainy shadows and weak contrast. A soft orange light leak bleeds in from one edge of the frame. Some areas look underexposed and muddy, like an old roll found in a drawer and developed much too late."
+    },
+    {
+      "title": "Film | Cross-processed",
+      "category": "Slide film",
+      "prompt": "A cross-processed photograph made from slide film developed in negative chemistry. Extreme contrast, pale blown-out highlights and colors pushed into acid yellow, cyan and green. Skin tones turn slightly sickly while the shadows go deep blue. Pronounced grain and the bold, experimental look of a late-1990s fashion magazine page."
+    },
+    {
+      "title": "Film | Super 8 home movie",
+      "category": "Cinema",
+      "prompt": "A single frame from a Super 8 home movie, enlarged from the tiny film gauge. Soft focus, heavy grain, warm faded color and a slight gate weave that leaves the edges uneven. A hint of motion blur from the low frame rate and bright highlights that bleed into their surroundings. The nostalgic feel of family footage from the 1970s."
+    }
+  ]
+}
