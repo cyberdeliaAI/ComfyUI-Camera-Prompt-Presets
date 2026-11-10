@@ -1,0 +1,37 @@
+{
+  "name": "Example: Tag-Style Suffixes for SDXL",
+  "version": "1.0",
+  "description": "Short comma-separated suffixes for tag-based SDXL checkpoints. For Krea 2 use the sentence-style libraries instead.",
+  "presets": [
+    {
+      "title": "Tags | Early phone snapshot",
+      "category": "Tags",
+      "prompt": "photo, amateur snapshot, early mobile phone camera, low resolution, jpeg artifacts, digital noise, soft focus, slight motion blur, direct flash, color cast, candid, casual framing"
+    },
+    {
+      "title": "Tags | 35mm film",
+      "category": "Tags",
+      "prompt": "analog photo, 35mm film, film grain, soft contrast, warm tones, faded colors, light leak, natural light, candid"
+    },
+    {
+      "title": "Tags | Studio portrait",
+      "category": "Tags",
+      "prompt": "photo, studio portrait, 85mm lens, shallow depth of field, bokeh, softbox lighting, rim light, sharp focus, detailed skin texture, plain backdrop"
+    },
+    {
+      "title": "Tags | Black and white film",
+      "category": "Tags",
+      "prompt": "monochrome, greyscale, black and white photo, film grain, high contrast, deep shadows, documentary photography"
+    },
+    {
+      "title": "Tags | VHS still",
+      "category": "Tags",
+      "prompt": "vhs still, analog video, scan lines, interlacing, chromatic aberration, color bleeding, tracking noise, low resolution, washed out colors"
+    },
+    {
+      "title": "Tags | Cinematic still",
+      "category": "Tags",
+      "prompt": "film still, cinematic, anamorphic lens, lens flare, teal and orange, shallow depth of field, film grain, dramatic lighting"
+    }
+  ]
+}
