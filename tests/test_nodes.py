@@ -34,6 +34,13 @@ class TestCameraPromptPresets(unittest.TestCase):
     def tearDownClass(cls):
         cls.temporary.cleanup()
 
+    def test_default_library(self):
+        self.assertEqual(self.module._default_library(), 'built_in:default.json')
+        presets=self.module._load_presets('built_in:default.json')
+        self.assertEqual(len(presets),16)
+        self.assertEqual(presets[0]['title'],'Mobile Phone | Medium (2005)')
+        self.assertEqual(len({p['title'] for p in presets}),16)
+
     def test_all_included(self):
         presets=self.module._load_presets('built_in:early_mobile_phone.json')
         self.assertEqual(len(presets), 34)
