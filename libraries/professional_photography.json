@@ -1,0 +1,47 @@
+{
+  "name": "Example: Professional Photography",
+  "version": "1.0",
+  "description": "Clean, high-end camera looks for portraits, editorial, street, product, sports, architecture and weddings.",
+  "presets": [
+    {
+      "title": "Portrait | 85mm studio headshot",
+      "category": "Portrait",
+      "prompt": "Photographed as a professional studio portrait on a full-frame camera with an 85mm lens at f/2. A large octabox to one side gives soft key light, a gentle white fill opens the shadows and a faint rim light separates the subject from a smooth charcoal backdrop. Shallow depth of field keeps the eyes razor sharp while the ears and shoulders fall off softly. Natural skin texture with visible pores and fine hairs, no retouching gloss. Neutral, accurate color with clean shadows and no visible noise."
+    },
+    {
+      "title": "Portrait | Window light at home",
+      "category": "Portrait",
+      "prompt": "Captured with a mirrorless camera and a 50mm lens wide open, lit only by soft daylight from a large window beside the subject. The light wraps gently across the face and falls into deep, quiet shadow on the far side. Warm, slightly muted colors, a creamy background blur and a thin plane of focus. Honest skin texture with no flash and no studio polish, like an intimate editorial portrait made in someone's home."
+    },
+    {
+      "title": "Editorial | Medium format fashion",
+      "category": "Editorial",
+      "prompt": "Shot on a medium format digital camera for a fashion magazine editorial. Hard, directional sunlight casts crisp shadows and gives the scene strong graphic contrast. Very high resolution with fine detail in fabric weave, skin and hair, rich tonal depth and smooth highlight roll-off. Deliberate framing with generous negative space. Clean color grading that is saturated but still natural."
+    },
+    {
+      "title": "Street | 35mm documentary",
+      "category": "Street",
+      "prompt": "A candid documentary photograph taken with a compact camera and a 35mm lens at eye level, the photographer standing close to the action. Available light only, with the natural mix of daylight and shop light the street provides. Slightly gritty high-ISO texture, honest color and a moment caught mid-gesture rather than posed. Some elements are cut off at the frame edges, as in real reportage."
+    },
+    {
+      "title": "Product | Macro studio",
+      "category": "Product",
+      "prompt": "A commercial product photograph made with a 100mm macro lens on a tripod. Two softboxes and a narrow strip light produce clean specular highlights along every edge. A seamless light gray sweep sits behind the object. Focus stacking keeps it sharp from front to back. True-to-life color, crisp texture on every surface and no dust or fingerprints."
+    },
+    {
+      "title": "Sports | Telephoto action",
+      "category": "Sports",
+      "prompt": "Photographed from the sideline with a 400mm telephoto lens at a fast shutter speed that freezes motion completely. Strong background compression turns the crowd into a soft, blurred wall of color. The subject is pin sharp, with small details like sweat drops and fabric creases visible. Bright stadium lighting, punchy contrast and the tight framing of a professional sports agency photo."
+    },
+    {
+      "title": "Architecture | Tilt-shift",
+      "category": "Architecture",
+      "prompt": "An architectural photograph taken with a tilt-shift lens on a full-frame camera mounted on a tripod. All vertical lines stay perfectly straight and parallel. Even daylight is balanced with warm interior lamps. The long exposure shows low noise and clean detail right into the corners. Neutral white balance, a calm symmetrical composition and the polished look of a design magazine spread."
+    },
+    {
+      "title": "Wedding | Golden hour",
+      "category": "Wedding",
+      "prompt": "A wedding photograph captured during golden hour with a fast 85mm lens. The low sun behind the subjects draws a warm glowing rim around hair and shoulders. Gentle lens flare and a soft haze lift the shadows slightly. Creamy background blur, warm skin tones and soft pastel highlights. It feels like a real moment between people, framed by a photographer who stayed in the background."
+    }
+  ]
+}
