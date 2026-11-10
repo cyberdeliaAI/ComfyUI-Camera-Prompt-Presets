@@ -53,6 +53,24 @@ class TestCameraPromptPresets(unittest.TestCase):
             self.module.CameraPromptPresets().compose(
                 'A portrait.', 'built_in:default.json', 'Previously selected preset')
 
+    def test_all_json_libraries_are_valid(self):
+        libraries = sorted((PROJECT / "libraries").glob("*.json"))
+        self.assertEqual(len(libraries), 8)
+        for path in libraries:
+            with self.subTest(library=path.name):
+                data = self.module._read_and_validate(path.read_bytes())
+                self.assertGreater(len(data), 0)
+                self.assertEqual(len({p["title"].casefold() for p in data}), len(data))
+                self.assertNotIn(self.module.NO_PRESET, {p["title"] for p in data})
+
+    def test_example_json_libraries_are_valid(self):
+        examples = sorted((PROJECT / "examples").glob("*.json"))
+        self.assertGreaterEqual(len(examples), 2)
+        for path in examples:
+            with self.subTest(example=path.name):
+                data = self.module._read_and_validate(path.read_bytes())
+                self.assertGreater(len(data), 0)
+
     def test_all_included(self):
         presets=self.module._load_presets('built_in:early_mobile_phone.json')
         self.assertEqual(len(presets), 34)
