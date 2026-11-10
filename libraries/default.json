@@ -1,0 +1,87 @@
+{
+  "name": "Camera Prompt Presets — Default Starter Library",
+  "version": "1.0",
+  "description": "Curated defaults. The original 34 mobile and 14 other camera presets remain available as separate libraries.",
+  "presets": [
+    {
+      "title": "Mobile Phone | Medium (2005)",
+      "category": "Mobile Phone",
+      "prompt": "A genuine amateur snapshot taken between 2003 and 2007 with a very cheap early mobile phone camera. It looks like a real everyday photo captured casually by an ordinary person, not a polished retro recreation. Very low resolution, soft blurry detail, muddy textures, pixelation, visible digital noise, chroma noise, imperfect focus, slight motion blur and mild handheld camera shake. Heavy JPEG compression creates blocky artifacts, color banding and brittle edges. Limited dynamic range, uneven automatic exposure, clipped highlights, crushed shadows and unstable white balance. Colors feel cheap and inconsistent, with a faint yellow-green cast, some oversaturated patches and other areas faded or washed out. The framing is casual and imperfect, slightly awkward and unposed, with the believable look of a forgotten old phone snapshot recovered from an outdated device or hard drive."
+    },
+    {
+      "title": "Mobile Phone | Mild (2005)",
+      "category": "Mobile Phone",
+      "prompt": "Photographed like a believable early-2000s mobile phone snapshot, around 2003 to 2007, using a cheap low-end device. The image has low resolution, soft detail, mild pixelation, visible digital noise, imperfect focus and some compression artifacts, but it still remains readable and natural. The dynamic range is limited and the colors are slightly unstable, with imperfect white balance and uneven saturation. The framing is casual and unpolished, with a spontaneous everyday feeling. It should feel authentically old and amateur rather than exaggerated or artificially degraded."
+    },
+    {
+      "title": "Mobile Phone | Strong (2005)",
+      "category": "Mobile Phone",
+      "prompt": "Rendered as a believable low-quality mobile phone photo from the early 2000s, around 2003 to 2007, taken on a very cheap low-end device. Extremely low resolution, visibly degraded image quality, smeared details, pixelated surfaces, harsh digital noise, chroma speckling, weak focus and slight blur from subject movement or shaky hands. Strong JPEG compression introduces blocky artifacts and banding, with crude digital sharpening around edges. Exposure is unreliable, with blown bright areas, muddy shadows and poor tonal separation. Colors are unstable and unattractive, with cheap sensor rendering, a slight greenish or yellowish cast and inconsistent saturation. The image should feel raw, flawed, spontaneous and completely believable as a real low-end camera phone snapshot."
+    },
+    {
+      "title": "Mobile Phone | Extreme degradation",
+      "category": "Mobile Phone",
+      "prompt": "Rendered as a severely degraded early mobile phone snapshot from 2003 to 2007, captured with a very cheap low-quality device. Extremely low resolution, smeared details, heavy pixelation, strong digital noise, chroma blotches, poor focus and visible motion blur make the image look genuinely bad in a believable way. Strong JPEG compression introduces obvious block artifacts, banding and ugly sharpening halos. Highlights blow out easily, shadows collapse into muddy darkness and the color reproduction is unstable and unpleasant, with a yellow-green cast and erratic saturation. The image should feel crude, accidental, harsh and completely authentic to low-end digital photography of that era."
+    },
+    {
+      "title": "Mobile Phone | Realism first",
+      "category": "Mobile Phone",
+      "prompt": "The image should look like a real snapshot taken with an inexpensive early mobile phone camera between 2003 and 2007. Keep the quality convincingly poor but natural, with low resolution, soft focus, muddy fine detail, visible sensor noise, compression artifacts and slight handheld blur. The exposure and white balance should feel automatic and imperfect, with limited dynamic range and somewhat unstable colors. The framing should remain casual, ordinary and unposed, like a genuine personal photograph rather than a stylized vintage effect. The overall impression is nostalgic, believable and unedited."
+    },
+    {
+      "title": "Mobile Phone | Indoor flash",
+      "category": "Mobile Phone",
+      "prompt": "Photographed like an authentic indoor mobile phone snapshot from 2003 to 2007 using a very cheap early phone camera. A harsh built-in flash creates flat frontal lighting, shiny overexposed skin, hard reflections and a dark background falling away behind the subject. The file looks extremely low resolution, with soft detail, pixelation, visible digital noise, chroma noise, slight blur and imperfect focus. Heavy JPEG compression produces blocky artifacts and brittle digital edges. The white balance feels automatic and unreliable, with odd skin tones and a slight yellow-green color shift. The composition is casual, awkward and unpolished, as if taken quickly at a party, at home, or during an ordinary moment without any concern for photography."
+    },
+    {
+      "title": "Mobile Phone | Outdoor daylight",
+      "category": "Mobile Phone",
+      "prompt": "Taken like a real outdoor amateur phone snapshot from the 2003 to 2007 period with a cheap mobile phone camera. The image has the unmistakable look of a low-end early digital sensor: very low resolution, soft details, muddy textures, visible noise, compression artifacts and weak optical clarity. Bright daylight overwhelms the tiny sensor, causing clipped highlights, washed-out bright areas and thin shadow detail. Colors feel uneven and slightly cheap, with inconsistent white balance and mild oversaturation in certain areas. The framing is casual and imperfect, with a slightly tilted angle and the spontaneous feeling of an ordinary personal snapshot."
+    },
+    {
+      "title": "Mobile Phone | Nighttime",
+      "category": "Mobile Phone",
+      "prompt": "Captured as a low-quality nighttime mobile phone snapshot from the early 2000s using a cheap camera phone. The scene is dim and poorly handled by the tiny sensor, with heavy noise, chroma blotches, weak detail, motion blur and unreliable focus. Dark areas become muddy and crushed, while bright spots clip harshly. If flash is present, it is harsh and frontal, flattening the subject while leaving the background dark and empty. Strong JPEG compression, banding and ugly digital artifacts make the image feel genuinely old and degraded. The overall effect is messy, believable and unmistakably like a forgotten early-phone photo."
+    },
+    {
+      "title": "Mobile Phone | Moving subject",
+      "category": "Mobile Phone",
+      "prompt": "Captured as a real early-2000s camera phone photo of a subject caught in motion. The cheap sensor and slow capture create slight motion blur, weak focus and a faint sense of camera shake, while the very low resolution, muddy detail, noise and compression artifacts keep the image looking authentically poor. Exposure is uneven and the dynamic range is limited, with clipped highlights and weak shadow detail. Colors feel unstable and a little dirty, with imperfect white balance and cheap digital rendering. The image should feel spontaneous, unplanned and believable, like a moment caught too quickly on an old mobile phone."
+    },
+    {
+      "title": "Mobile Phone | Recovered file",
+      "category": "Mobile Phone",
+      "prompt": "The image should feel like an old forgotten digital snapshot recovered from a 2005 phone memory card or an outdated computer hard drive. It has the unmistakable flaws of a cheap early mobile phone camera: extremely low resolution, soft blurry detail, visible pixelation, digital noise, chroma noise, compression artifacts and weak focus. The tonal range is poor, with blown highlights, crushed shadows and uneven exposure. Colors are inconsistent and slightly degraded, with a faint yellow-green cast and some areas either overly saturated or washed out. The image feels raw, accidental, unedited and deeply nostalgic, like a real surviving file from the early digital era."
+    },
+    {
+      "title": "Mobile Phone | Fluorescent office",
+      "category": "Mobile Phone",
+      "prompt": "Captured on a cheap 2004 to 2007 camera phone under flat fluorescent ceiling lights in an ordinary shop, hallway or office. The lighting gives the scene a slightly sickly green cast, uneven white balance and pale highlights. The small sensor renders faces and surfaces with weak tonal separation, softness, visible noise and patchy color, while heavy JPEG compression damages fine patterns and straight edges. The framing is matter-of-fact and a little crooked, as if someone snapped the picture without trying to make it attractive. It should look like a genuine low-quality file from that period."
+    },
+    {
+      "title": "Mobile Phone | Mirror selfie",
+      "category": "Mobile Phone",
+      "prompt": "A spontaneous mirror snapshot taken with an inexpensive camera phone around 2004 to 2007, as if someone quickly photographed their own reflection in an everyday room. The small phone is visible in the reflection, held casually, with slightly awkward framing and no deliberate pose. The file has low resolution, soft detail, weak focus, blocky JPEG compression, chroma noise and patchy, unreliable colors. Room lighting creates inconsistent exposure, with some bright reflective areas clipped and the rest looking muddy. The mirror may have ordinary faint smudges, and the whole image feels like an unedited personal file from an old handset."
+    },
+    {
+      "title": "Digital Camera | 2004 budget compact",
+      "category": "Digital Camera",
+      "prompt": "A candid snapshot from a very inexpensive point-and-shoot digital camera around 2004. The on-camera flash is flat and direct, the small CCD sensor renders bright colors harshly, and fine detail is softened by the cheap zoom lens. Automatic exposure lifts faces but clips bright windows and reflective objects. Slight red-eye, yellowish white balance, crunchy sharpening and visible JPEG compression make it feel like an ordinary family photo copied from an old memory card."
+    },
+    {
+      "title": "Webcam | 2005 low quality still",
+      "category": "Webcam",
+      "prompt": "A low-quality still captured from a cheap desktop webcam around 2005. Fixed wide-angle view from close to the screen, awkward eye-level framing, soft plastic-lens optics and coarse low-resolution detail. The automatic exposure overcompensates for the monitor glow, flattening faces and darkening the room. Muddy shadows, greenish color balance, visible pixel noise and blocky compression resemble a paused frame from a forgotten video chat."
+    },
+    {
+      "title": "Film | 1990s disposable camera",
+      "category": "Film",
+      "prompt": "An everyday 1990s snapshot taken with a very cheap disposable 35mm film camera. Fixed-focus plastic-lens softness, modest corner vignetting, rough film grain and uneven development give the photo a genuine inexpensive print quality. Direct built-in flash creates bright flat foreground faces and a dark background. The composition feels instinctive and slightly careless, with realistic exposure errors and occasional warm or greenish color shifts from the film stock."
+    },
+    {
+      "title": "Camcorder | VHS home-video still",
+      "category": "Camcorder",
+      "prompt": "A single frame grabbed from an ordinary family VHS recording from the early 1990s. Soft analog video definition, horizontal color bleed, subtle luma noise, faint tracking instability near the bottom edge and slightly misaligned red and blue details. Bright areas bloom into soft white and shadows lose definition. The framing is unplanned, with the feel of someone holding a heavy home camcorder for a fleeting moment."
+    }
+  ]
+}
